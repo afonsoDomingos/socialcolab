@@ -1,6 +1,8 @@
 "use client";
-import { Bell, Plus, Search } from "lucide-react";
+import { Bell, Plus, Search, Menu } from "lucide-react";
 import { currentUser } from "@/lib/data";
+import { useUI } from "@/components/AppLayout";
+import { useRouter } from "next/navigation";
 
 interface TopbarProps {
     title: string;
@@ -8,6 +10,9 @@ interface TopbarProps {
 }
 
 export default function Topbar({ title, subtitle }: TopbarProps) {
+    const { toggleSidebar, searchQuery, setSearchQuery } = useUI();
+    const router = useRouter();
+
     return (
         <header
             style={{
@@ -24,6 +29,20 @@ export default function Topbar({ title, subtitle }: TopbarProps) {
                 flexShrink: 0,
             }}
         >
+            <button
+                onClick={toggleSidebar}
+                style={{
+                    background: "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#0F172A",
+                }}
+            >
+                <Menu size={20} />
+            </button>
             {/* Title */}
             <div style={{ flex: 1 }}>
                 <h1
@@ -55,14 +74,28 @@ export default function Topbar({ title, subtitle }: TopbarProps) {
                     borderRadius: 10,
                     padding: "8px 14px",
                     width: 280,
-                    cursor: "pointer",
                     transition: "all 0.2s",
                 }}
             >
                 <Search size={15} color="#94A3B8" />
-                <span style={{ fontSize: 13, color: "#94A3B8" }}>
-                    Pesquisar na plataforma...
-                </span>
+                <input
+                    placeholder="Pesquisar..."
+                    value={searchQuery}
+                    onChange={(e) => {
+                        setSearchQuery(e.target.value);
+                        if (e.target.value.trim() !== '') {
+                            router.push('/pesquisa');
+                        }
+                    }}
+                    style={{
+                        border: "none",
+                        outline: "none",
+                        background: "transparent",
+                        fontSize: 13,
+                        color: "#334155",
+                        width: "100%"
+                    }}
+                />
             </div>
 
             {/* New Post */}
