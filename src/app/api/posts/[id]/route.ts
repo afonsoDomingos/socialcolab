@@ -3,11 +3,12 @@ import { connectDB } from "@/lib/mongodb";
 import { Post } from "@/models";
 
 // Like / Unlike
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
+        const { id } = await params;
         await connectDB();
         const { userId } = await req.json();
-        const post = await Post.findById(params.id);
+        const post = await Post.findById(id);
         if (!post) return NextResponse.json({ success: false, error: "Post não encontrado" }, { status: 404 });
 
         const idx = post.likes.indexOf(userId);
@@ -25,12 +26,13 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
 }
 
 // Add comment
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
+        const { id } = await params;
         await connectDB();
         const { userId, content } = await req.json();
         const post = await Post.findByIdAndUpdate(
-            params.id,
+            id,
             { $push: { comments: { author: userId, content } } },
             { new: true }
         ).populate("comments.author", "name avatar");
@@ -41,10 +43,11 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     }
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
+        const { id } = await params;
         await connectDB();
-        const post = await Post.findById(params.id).lean() as any;
+        const post = await Post.findById(id).lean() as any;
         if (!post) return NextResponse.json({ success: false, error: "Post não encontrado" }, { status: 404 });
 
         if (post.imagePublicId) {
@@ -52,7 +55,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
             await deleteFromCloudinary(post.imagePublicId);
         }
 
-        await Post.findByIdAndDelete(params.id);
+        await Post.findByIdAndDelete(id);
         return NextResponse.json({ success: true });
     } catch (error: any) {
         return NextResponse.json({ success: false, error: error.message }, { status: 500 });
