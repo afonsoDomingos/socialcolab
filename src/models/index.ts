@@ -105,7 +105,7 @@ const ProjectSchema = new Schema(
     },
     progress: { type: Number, default: 0, min: 0, max: 100 },
     dueDate: { type: Date },
-    color: { type: String, default: "#2563EB" },
+    color: { type: String, default: "#111827" },
     tasks: [{ type: Schema.Types.ObjectId, ref: "Task" }],
   },
   { timestamps: true }

@@ -95,7 +95,7 @@ export default function Topbar({ title, subtitle }: TopbarProps) {
                         position: "absolute",
                         top: -4,
                         right: -4,
-                        background: "#EF4444",
+                        background: "#6B7280",
                         color: "white",
                         fontSize: 9,
                         minWidth: 16,
@@ -121,7 +121,7 @@ export default function Topbar({ title, subtitle }: TopbarProps) {
                         width: 38,
                         height: 38,
                         borderRadius: "50%",
-                        border: "2.5px solid #2563EB",
+                        border: "2.5px solid #111827",
                     }}
                 />
                 <span
@@ -132,7 +132,7 @@ export default function Topbar({ title, subtitle }: TopbarProps) {
                         width: 11,
                         height: 11,
                         borderRadius: "50%",
-                        background: "#10B981",
+                        background: "#4B5563",
                         border: "2px solid white",
                     }}
                 />

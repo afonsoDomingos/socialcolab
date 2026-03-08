@@ -6,9 +6,9 @@ import { ThumbsUp, MessageCircle, Plus, Lightbulb, CheckCircle, Clock, Star } fr
 
 const statusConfig = {
     submitted: { label: "Submetida", color: "#94A3B8", bg: "#F1F5F9", icon: "📥" },
-    review: { label: "Em análise", color: "#F59E0B", bg: "rgba(245,158,11,0.1)", icon: "🔍" },
-    approved: { label: "Aprovada", color: "#2563EB", bg: "rgba(37,99,235,0.1)", icon: "✅" },
-    implemented: { label: "Implementada", color: "#10B981", bg: "rgba(16,185,129,0.1)", icon: "🚀" },
+    review: { label: "Em análise", color: "#6B7280", bg: "rgba(107,114,128,0.1)", icon: "🔍" },
+    approved: { label: "Aprovada", color: "#111827", bg: "rgba(17,24,39,0.1)", icon: "✅" },
+    implemented: { label: "Implementada", color: "#4B5563", bg: "rgba(75,85,99,0.1)", icon: "🚀" },
 };
 
 const categories = ["Todas", "Produto", "Processo", "Cultura", "Tecnologia", "Cliente"];
@@ -41,7 +41,7 @@ export default function IdeiasPage() {
 
                 {/* Hero */}
                 <div style={{
-                    background: "linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)",
+                    background: "linear-gradient(135deg, #4B5563 0%, #111827 100%)",
                     borderRadius: 20,
                     padding: "28px 32px",
                     color: "white",
@@ -100,9 +100,9 @@ export default function IdeiasPage() {
                                             padding: "7px 14px",
                                             borderRadius: 8,
                                             border: "1.5px solid",
-                                            borderColor: filter === cat ? "#7C3AED" : "#E2E8F0",
-                                            background: filter === cat ? "rgba(124,58,237,0.08)" : "white",
-                                            color: filter === cat ? "#7C3AED" : "#64748B",
+                                            borderColor: filter === cat ? "#4B5563" : "#E2E8F0",
+                                            background: filter === cat ? "rgba(75,85,99,0.08)" : "white",
+                                            color: filter === cat ? "#4B5563" : "#64748B",
                                             fontSize: 12,
                                             fontWeight: 600,
                                             cursor: "pointer",
@@ -120,7 +120,7 @@ export default function IdeiasPage() {
                                 padding: "9px 18px",
                                 borderRadius: 10,
                                 border: "none",
-                                background: "linear-gradient(135deg, #7C3AED, #2563EB)",
+                                background: "linear-gradient(135deg, #4B5563, #111827)",
                                 color: "white",
                                 fontSize: 13,
                                 fontWeight: 600,
@@ -156,8 +156,8 @@ export default function IdeiasPage() {
                                                 height: 52,
                                                 borderRadius: 12,
                                                 border: "1.5px solid",
-                                                borderColor: votedIdeas[idea.id] ? "#7C3AED" : "#E2E8F0",
-                                                background: votedIdeas[idea.id] ? "rgba(124,58,237,0.08)" : "white",
+                                                borderColor: votedIdeas[idea.id] ? "#4B5563" : "#E2E8F0",
+                                                background: votedIdeas[idea.id] ? "rgba(75,85,99,0.08)" : "white",
                                                 display: "flex",
                                                 flexDirection: "column",
                                                 alignItems: "center",
@@ -169,13 +169,13 @@ export default function IdeiasPage() {
                                         >
                                             <ThumbsUp
                                                 size={16}
-                                                color={votedIdeas[idea.id] ? "#7C3AED" : "#94A3B8"}
-                                                fill={votedIdeas[idea.id] ? "#7C3AED" : "none"}
+                                                color={votedIdeas[idea.id] ? "#4B5563" : "#94A3B8"}
+                                                fill={votedIdeas[idea.id] ? "#4B5563" : "none"}
                                             />
                                             <span style={{
                                                 fontSize: 13,
                                                 fontWeight: 700,
-                                                color: votedIdeas[idea.id] ? "#7C3AED" : "#64748B",
+                                                color: votedIdeas[idea.id] ? "#4B5563" : "#64748B",
                                             }}>
                                                 {votes[idea.id]}
                                             </span>
@@ -256,7 +256,7 @@ export default function IdeiasPage() {
                                                 width: 24,
                                                 height: 24,
                                                 borderRadius: 6,
-                                                background: i === 0 ? "#F59E0B" : i === 1 ? "#94A3B8" : "#CD7F32",
+                                                background: i === 0 ? "#6B7280" : i === 1 ? "#94A3B8" : "#CD7F32",
                                                 display: "flex",
                                                 alignItems: "center",
                                                 justifyContent: "center",
@@ -303,7 +303,7 @@ export default function IdeiasPage() {
                                             padding: "2px 8px",
                                             borderRadius: 20,
                                             background: "#EFF6FF",
-                                            color: "#2563EB",
+                                            color: "#111827",
                                             fontSize: 11,
                                             fontWeight: 700,
                                         }}>

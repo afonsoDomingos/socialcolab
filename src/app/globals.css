@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #2563EB;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --secondary: #7C3AED;
-  --accent: #10B981;
-  --warning: #F59E0B;
-  --danger: #EF4444;
-  --surface: #F8FAFC;
-  --surface-2: #F1F5F9;
-  --border: #E2E8F0;
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
-  --text-muted: #94A3B8;
-  --sidebar-bg: #0F172A;
-  --sidebar-hover: #1E293B;
-  --sidebar-active: #2563EB;
+  --primary: #111827;
+  --primary-dark: #000000;
+  --primary-light: #374151;
+  --secondary: #4B5563;
+  --accent: #1F2937;
+  --warning: #6B7280;
+  --danger: #111827;
+  --surface: #F9FAFB;
+  --surface-2: #F3F4F6;
+  --border: #E5E7EB;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  --sidebar-bg: #111827;
+  --sidebar-hover: #1F2937;
+  --sidebar-active: #374151;
   --card-bg: #FFFFFF;
-  --gradient-1: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
-  --gradient-2: linear-gradient(135deg, #10B981 0%, #2563EB 100%);
-  --gradient-3: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+  --gradient-1: linear-gradient(135deg, #111827 0%, #374151 100%);
+  --gradient-2: linear-gradient(135deg, #374151 0%, #111827 100%);
+  --gradient-3: linear-gradient(135deg, #4B5563 0%, #111827 100%);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -98,17 +98,17 @@ body {
 @keyframes pulse-ring {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 0 0 rgba(17, 24, 39, 0.4);
   }
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+    box-shadow: 0 0 0 8px rgba(17, 24, 39, 0);
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    box-shadow: 0 0 0 0 rgba(17, 24, 39, 0);
   }
 }
 
@@ -209,19 +209,19 @@ body {
 
 /* Status indicators */
 .status-online {
-  background: #10B981;
+  background: #374151;
 }
 
 .status-busy {
-  background: #F59E0B;
+  background: #6B7280;
 }
 
 .status-away {
-  background: #94A3B8;
+  background: #9CA3AF;
 }
 
 .status-meeting {
-  background: #EF4444;
+  background: #111827;
 }
 
 /* Progress bar */
@@ -269,12 +269,12 @@ body {
 }
 
 .sidebar-link.active {
-  background: rgba(37, 99, 235, 0.15);
-  color: #60A5FA;
+  background: rgba(17, 24, 39, 0.15);
+  color: #111827;
 }
 
 .sidebar-link.active svg {
-  color: #3B82F6;
+  color: #111827;
 }
 
 /* Avatar */
@@ -298,12 +298,12 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.4);
 }
 
 .btn-primary:active {
@@ -346,7 +346,7 @@ body {
 
 .input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.1);
 }
 
 .input::placeholder {

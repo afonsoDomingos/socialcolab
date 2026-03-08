@@ -18,19 +18,19 @@ const mockDocs = [
 
 const getIconColor = (type: string) => {
     switch (type) {
-        case 'pdf': return '#EF4444';
-        case 'excel': return '#10B981';
-        case 'word': return '#2563EB';
-        case 'powerpoint': return '#F59E0B';
+        case 'pdf': return '#6B7280';
+        case 'excel': return '#4B5563';
+        case 'word': return '#111827';
+        case 'powerpoint': return '#6B7280';
         default: return '#64748B';
     }
 };
 
 const getAuthBadge = (auth: string) => {
     switch (auth) {
-        case 'public': return { label: 'Público', color: '#10B981', bg: 'rgba(16,185,129,0.1)', icon: Users };
-        case 'internal': return { label: 'Interno', color: '#3B82F6', bg: 'rgba(59,130,246,0.1)', icon: Folder };
-        case 'confidential': return { label: 'Confidencial', color: '#EF4444', bg: 'rgba(239,68,68,0.1)', icon: Lock };
+        case 'public': return { label: 'Público', color: '#4B5563', bg: 'rgba(75,85,99,0.1)', icon: Users };
+        case 'internal': return { label: 'Interno', color: '#9CA3AF', bg: 'rgba(156,163,175,0.1)', icon: Folder };
+        case 'confidential': return { label: 'Confidencial', color: '#6B7280', bg: 'rgba(107,114,128,0.1)', icon: Lock };
         default: return { label: auth, color: '#64748B', bg: '#F1F5F9', icon: Folder };
     }
 };
@@ -66,9 +66,9 @@ export default function DocumentosPage() {
                     </div>
                     <button style={{
                         display: "flex", alignItems: "center", gap: 8, padding: "10px 20px",
-                        borderRadius: 10, border: "none", background: "linear-gradient(135deg, #2563EB, #7C3AED)",
+                        borderRadius: 10, border: "none", background: "linear-gradient(135deg, #111827, #4B5563)",
                         color: "white", fontSize: 13, fontWeight: 600, cursor: "pointer",
-                        boxShadow: "0 4px 12px rgba(37,99,235,0.3)"
+                        boxShadow: "0 4px 12px rgba(17,24,39,0.3)"
                     }}>
                         <UploadCloud size={16} />
                         Novo Upload
@@ -82,9 +82,9 @@ export default function DocumentosPage() {
                             key={dept.id}
                             onClick={() => setFilter(filter === dept.name ? "Todos" : dept.name)}
                             style={{
-                                background: filter === dept.name ? "rgba(37,99,235,0.05)" : "white",
+                                background: filter === dept.name ? "rgba(17,24,39,0.05)" : "white",
                                 borderRadius: 16, border: "1px solid",
-                                borderColor: filter === dept.name ? "#2563EB" : "#E2E8F0",
+                                borderColor: filter === dept.name ? "#111827" : "#E2E8F0",
                                 padding: "20px", display: "flex", alignItems: "center", gap: 16, cursor: "pointer",
                                 transition: "all 0.2s"
                             }}

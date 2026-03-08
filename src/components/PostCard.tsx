@@ -4,9 +4,9 @@ import { Post } from "@/lib/data";
 import { useState } from "react";
 
 const typeColors: Record<string, { bg: string; text: string; label: string }> = {
-    announcement: { bg: "rgba(37,99,235,0.08)", text: "#2563EB", label: "📣 Comunicado" },
+    announcement: { bg: "rgba(17,24,39,0.08)", text: "#111827", label: "📣 Comunicado" },
     achievement: { bg: "rgba(16,185,129,0.08)", text: "#059669", label: "🏆 Conquista" },
-    idea: { bg: "rgba(124,58,237,0.08)", text: "#7C3AED", label: "💡 Ideia" },
+    idea: { bg: "rgba(75,85,99,0.08)", text: "#4B5563", label: "💡 Ideia" },
     text: { bg: "transparent", text: "#64748B", label: "" },
 };
 
@@ -158,7 +158,7 @@ export default function PostCard({ post }: { post: Post }) {
                             style={{
                                 padding: "3px 10px",
                                 background: "#EFF6FF",
-                                color: "#2563EB",
+                                color: "#111827",
                                 borderRadius: 20,
                                 fontSize: 12,
                                 fontWeight: 500,
@@ -197,7 +197,7 @@ export default function PostCard({ post }: { post: Post }) {
                         borderRadius: 10,
                         border: "none",
                         background: liked ? "rgba(239,68,68,0.08)" : "transparent",
-                        color: liked ? "#EF4444" : "#64748B",
+                        color: liked ? "#6B7280" : "#64748B",
                         fontSize: 13,
                         fontWeight: 500,
                         cursor: "pointer",
@@ -206,8 +206,8 @@ export default function PostCard({ post }: { post: Post }) {
                 >
                     <Heart
                         size={16}
-                        fill={liked ? "#EF4444" : "none"}
-                        color={liked ? "#EF4444" : "#94A3B8"}
+                        fill={liked ? "#6B7280" : "none"}
+                        color={liked ? "#6B7280" : "#94A3B8"}
                     />
                     {likes}
                 </button>
@@ -267,8 +267,8 @@ export default function PostCard({ post }: { post: Post }) {
                 >
                     <Bookmark
                         size={16}
-                        fill={saved ? "#2563EB" : "none"}
-                        color={saved ? "#2563EB" : "#94A3B8"}
+                        fill={saved ? "#111827" : "none"}
+                        color={saved ? "#111827" : "#94A3B8"}
                     />
                 </button>
             </div>

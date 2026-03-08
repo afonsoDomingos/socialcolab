@@ -40,10 +40,10 @@ const mockMessages = [
 ];
 
 const statusColors: Record<string, string> = {
-    online: "#10B981",
-    busy: "#F59E0B",
+    online: "#4B5563",
+    busy: "#6B7280",
     away: "#94A3B8",
-    meeting: "#EF4444",
+    meeting: "#6B7280",
 };
 
 export default function ChatPage() {
@@ -102,7 +102,7 @@ export default function ChatPage() {
                                 width: 38,
                                 height: 38,
                                 borderRadius: 10,
-                                background: "linear-gradient(135deg, #2563EB, #7C3AED)",
+                                background: "linear-gradient(135deg, #111827, #4B5563)",
                                 border: "none",
                                 display: "flex",
                                 alignItems: "center",
@@ -169,7 +169,7 @@ export default function ChatPage() {
                                     </div>
                                 </div>
                                 {conv.unread > 0 && (
-                                    <span className="badge" style={{ background: "#2563EB", color: "white", flexShrink: 0 }}>
+                                    <span className="badge" style={{ background: "#111827", color: "white", flexShrink: 0 }}>
                                         {conv.unread}
                                     </span>
                                 )}
@@ -264,7 +264,7 @@ export default function ChatPage() {
                                     padding: "12px 16px",
                                     borderRadius: msg.fromMe ? "18px 18px 4px 18px" : "18px 18px 18px 4px",
                                     background: msg.fromMe
-                                        ? "linear-gradient(135deg, #2563EB, #7C3AED)"
+                                        ? "linear-gradient(135deg, #111827, #4B5563)"
                                         : "white",
                                     color: msg.fromMe ? "white" : "#334155",
                                     fontSize: 14,
@@ -330,7 +330,7 @@ export default function ChatPage() {
                             width: 44,
                             height: 44,
                             borderRadius: 12,
-                            background: messageText ? "linear-gradient(135deg, #2563EB, #7C3AED)" : "#F1F5F9",
+                            background: messageText ? "linear-gradient(135deg, #111827, #4B5563)" : "#F1F5F9",
                             border: "none",
                             display: "flex",
                             alignItems: "center",

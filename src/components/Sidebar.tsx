@@ -20,10 +20,10 @@ const mainNav = [
 ];
 
 const statusColors: Record<string, string> = {
-    online: "#10B981",
-    busy: "#F59E0B",
+    online: "#4B5563",
+    busy: "#6B7280",
     away: "#94A3B8",
-    meeting: "#EF4444",
+    meeting: "#6B7280",
 };
 const statusLabels: Record<string, string> = {
     online: "Disponível",
@@ -59,7 +59,7 @@ export default function Sidebar() {
                             width: 38,
                             height: 38,
                             borderRadius: 10,
-                            background: "linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)",
+                            background: "linear-gradient(135deg, #111827 0%, #4B5563 100%)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -144,14 +144,14 @@ export default function Sidebar() {
                             style={{
                                 marginBottom: 2,
                                 ...(active && {
-                                    background: "rgba(37,99,235,0.15)",
+                                    background: "rgba(17,24,39,0.15)",
                                     color: "#60A5FA",
                                 }),
                             }}
                         >
                             <item.icon
                                 size={18}
-                                color={active ? "#3B82F6" : "#64748B"}
+                                color={active ? "#9CA3AF" : "#64748B"}
                                 style={{ flexShrink: 0 }}
                             />
                             {item.label}
@@ -160,7 +160,7 @@ export default function Sidebar() {
                                     className="badge"
                                     style={{
                                         marginLeft: "auto",
-                                        background: "#EF4444",
+                                        background: "#6B7280",
                                         color: "white",
                                         fontSize: 10,
                                     }}
@@ -199,7 +199,7 @@ export default function Sidebar() {
                             style={{
                                 marginBottom: 2,
                                 ...(active && {
-                                    background: "rgba(37,99,235,0.15)",
+                                    background: "rgba(17,24,39,0.15)",
                                     color: "#60A5FA",
                                 }),
                             }}

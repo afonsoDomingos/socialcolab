@@ -5,10 +5,10 @@ import { useState } from "react";
 import { Plus, Search, MapPin, Clock, Users, Video } from "lucide-react";
 
 const typeColors: Record<string, { bg: string; color: string; label: string }> = {
-    meeting: { bg: "rgba(37,99,235,0.1)", color: "#2563EB", label: "Reunião" },
-    training: { bg: "rgba(16,185,129,0.1)", color: "#10B981", label: "Formação" },
-    event: { bg: "rgba(124,58,237,0.1)", color: "#7C3AED", label: "Evento" },
-    deadline: { bg: "rgba(239,68,68,0.1)", color: "#EF4444", label: "Prazo" },
+    meeting: { bg: "rgba(17,24,39,0.1)", color: "#111827", label: "Reunião" },
+    training: { bg: "rgba(75,85,99,0.1)", color: "#4B5563", label: "Formação" },
+    event: { bg: "rgba(75,85,99,0.1)", color: "#4B5563", label: "Evento" },
+    deadline: { bg: "rgba(107,114,128,0.1)", color: "#6B7280", label: "Prazo" },
 };
 
 const monthNames = [
@@ -45,7 +45,7 @@ export default function AgendaPage() {
                     <div style={{
                         fontSize: 13, fontWeight: isToday ? 800 : 500,
                         color: isToday ? "white" : "#475569",
-                        background: isToday ? "#2563EB" : "transparent",
+                        background: isToday ? "#111827" : "transparent",
                         width: 24, height: 24, borderRadius: "50%",
                         display: "flex", alignItems: "center", justifyContent: "center",
                         alignSelf: "flex-end"
@@ -100,17 +100,17 @@ export default function AgendaPage() {
                         </div>
                         <div style={{ display: "flex", gap: 8 }}>
                             <button style={{
-                                padding: "8px 16px", borderRadius: 10, border: "1.5px solid #2563EB",
-                                background: "white", color: "#2563EB", fontSize: 13, fontWeight: 600, cursor: "pointer"
+                                padding: "8px 16px", borderRadius: 10, border: "1.5px solid #111827",
+                                background: "white", color: "#111827", fontSize: 13, fontWeight: 600, cursor: "pointer"
                             }}>
                                 Hoje
                             </button>
                             <button
                                 style={{
                                     display: "flex", alignItems: "center", gap: 8, padding: "8px 16px",
-                                    borderRadius: 10, border: "none", background: "linear-gradient(135deg, #2563EB, #7C3AED)",
+                                    borderRadius: 10, border: "none", background: "linear-gradient(135deg, #111827, #4B5563)",
                                     color: "white", fontSize: 13, fontWeight: 600, cursor: "pointer",
-                                    boxShadow: "0 4px 12px rgba(37,99,235,0.3)",
+                                    boxShadow: "0 4px 12px rgba(17,24,39,0.3)",
                                 }}
                             >
                                 <Plus size={16} />

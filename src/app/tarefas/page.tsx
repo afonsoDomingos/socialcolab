@@ -10,9 +10,9 @@ import TaskCard from "@/components/TaskCard";
 
 const columns = [
     { id: "todo", label: "A fazer", icon: Clock, color: "#94A3B8", count: 0 },
-    { id: "inprogress", label: "Em progresso", icon: AlertCircle, color: "#2563EB", count: 0 },
-    { id: "review", label: "Em revisão", icon: Eye, color: "#F59E0B", count: 0 },
-    { id: "done", label: "Concluído", icon: CheckCircle2, color: "#10B981", count: 0 },
+    { id: "inprogress", label: "Em progresso", icon: AlertCircle, color: "#111827", count: 0 },
+    { id: "review", label: "Em revisão", icon: Eye, color: "#6B7280", count: 0 },
+    { id: "done", label: "Concluído", icon: CheckCircle2, color: "#4B5563", count: 0 },
 ];
 
 export default function TarefasPage() {
@@ -40,9 +40,9 @@ export default function TarefasPage() {
                                     padding: "7px 14px",
                                     borderRadius: 8,
                                     border: "1.5px solid",
-                                    borderColor: filter === d ? "#2563EB" : "#E2E8F0",
+                                    borderColor: filter === d ? "#111827" : "#E2E8F0",
                                     background: filter === d ? "#EFF6FF" : "white",
-                                    color: filter === d ? "#2563EB" : "#64748B",
+                                    color: filter === d ? "#111827" : "#64748B",
                                     fontSize: 12,
                                     fontWeight: 600,
                                     cursor: "pointer",
@@ -67,7 +67,7 @@ export default function TarefasPage() {
                                         borderRadius: 8,
                                         border: "none",
                                         background: view === v ? "white" : "transparent",
-                                        color: view === v ? "#2563EB" : "#94A3B8",
+                                        color: view === v ? "#111827" : "#94A3B8",
                                         cursor: "pointer",
                                         display: "flex",
                                         alignItems: "center",

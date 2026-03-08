@@ -29,23 +29,23 @@ const statCards = [
     label: "Colaboradores",
     value: stats.totalCollaborators,
     icon: Users,
-    color: "#2563EB",
-    bg: "rgba(37,99,235,0.08)",
+    color: "#111827",
+    bg: "rgba(17,24,39,0.08)",
     suffix: "",
   },
   {
     label: "Projectos Activos",
     value: stats.activeProjects,
     icon: FolderOpen,
-    color: "#7C3AED",
-    bg: "rgba(124,58,237,0.08)",
+    color: "#4B5563",
+    bg: "rgba(75,85,99,0.08)",
     suffix: "",
   },
   {
     label: "Tarefas esta semana",
     value: stats.tasksCompletedThisWeek,
     icon: CheckSquare,
-    color: "#10B981",
+    color: "#4B5563",
     bg: "rgba(16,185,129,0.08)",
     suffix: "",
   },
@@ -53,17 +53,17 @@ const statCards = [
     label: "Produtividade",
     value: stats.avgProductivity,
     icon: TrendingUp,
-    color: "#F59E0B",
+    color: "#6B7280",
     bg: "rgba(245,158,11,0.08)",
     suffix: "%",
   },
 ];
 
 const eventTypeColors: Record<string, { bg: string; color: string }> = {
-  meeting: { bg: "rgba(37,99,235,0.1)", color: "#2563EB" },
-  training: { bg: "rgba(16,185,129,0.1)", color: "#10B981" },
-  event: { bg: "rgba(124,58,237,0.1)", color: "#7C3AED" },
-  deadline: { bg: "rgba(239,68,68,0.1)", color: "#EF4444" },
+  meeting: { bg: "rgba(17,24,39,0.1)", color: "#111827" },
+  training: { bg: "rgba(75,85,99,0.1)", color: "#4B5563" },
+  event: { bg: "rgba(75,85,99,0.1)", color: "#4B5563" },
+  deadline: { bg: "rgba(107,114,128,0.1)", color: "#6B7280" },
 };
 
 export default function HomePage() {
@@ -294,9 +294,9 @@ export default function HomePage() {
                   padding: "8px 16px",
                   borderRadius: 10,
                   border: "1.5px solid",
-                  borderColor: feedFilter === f.id ? "#2563EB" : "#E2E8F0",
+                  borderColor: feedFilter === f.id ? "#111827" : "#E2E8F0",
                   background: feedFilter === f.id ? "#EFF6FF" : "white",
-                  color: feedFilter === f.id ? "#2563EB" : "#64748B",
+                  color: feedFilter === f.id ? "#111827" : "#64748B",
                   fontSize: 13,
                   fontWeight: 600,
                   cursor: "pointer",
@@ -321,7 +321,7 @@ export default function HomePage() {
           {/* Welcome Card */}
           <div
             style={{
-              background: "linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)",
+              background: "linear-gradient(135deg, #111827 0%, #4B5563 100%)",
               borderRadius: 16,
               padding: "20px",
               color: "white",
@@ -429,7 +429,7 @@ export default function HomePage() {
                 href="/tarefas"
                 style={{
                   fontSize: 12,
-                  color: "#2563EB",
+                  color: "#111827",
                   fontWeight: 600,
                   textDecoration: "none",
                   display: "flex",
@@ -462,12 +462,12 @@ export default function HomePage() {
                       borderRadius: "50%",
                       background:
                         task.priority === "urgent"
-                          ? "#7C3AED"
+                          ? "#4B5563"
                           : task.priority === "high"
-                            ? "#EF4444"
+                            ? "#6B7280"
                             : task.priority === "medium"
-                              ? "#F59E0B"
-                              : "#10B981",
+                              ? "#6B7280"
+                              : "#4B5563",
                       flexShrink: 0,
                       marginTop: 5,
                     }}
@@ -516,7 +516,7 @@ export default function HomePage() {
                 href="/agenda"
                 style={{
                   fontSize: 12,
-                  color: "#2563EB",
+                  color: "#111827",
                   fontWeight: 600,
                   textDecoration: "none",
                   display: "flex",
@@ -627,7 +627,7 @@ export default function HomePage() {
                 href="/reconhecimento"
                 style={{
                   fontSize: 12,
-                  color: "#2563EB",
+                  color: "#111827",
                   fontWeight: 600,
                   textDecoration: "none",
                   display: "flex",
@@ -645,7 +645,7 @@ export default function HomePage() {
                   style={{
                     padding: "12px",
                     borderRadius: 12,
-                    background: "linear-gradient(135deg, rgba(245,158,11,0.04), rgba(239,68,68,0.04))",
+                    background: "linear-gradient(135deg, rgba(107,114,128,0.04), rgba(239,68,68,0.04))",
                     border: "1px solid rgba(245,158,11,0.12)",
                   }}
                 >
@@ -675,7 +675,7 @@ export default function HomePage() {
                   <div
                     style={{
                       padding: "4px 10px",
-                      background: "rgba(245,158,11,0.1)",
+                      background: "rgba(107,114,128,0.1)",
                       color: "#D97706",
                       borderRadius: 20,
                       fontSize: 11,

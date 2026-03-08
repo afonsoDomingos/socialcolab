@@ -16,9 +16,9 @@ const productivityData = [
 
 const taskData = [
     { name: 'A fazer', value: 45, color: '#94A3B8' },
-    { name: 'Em progresso', value: 30, color: '#3B82F6' },
-    { name: 'Em revisão', value: 15, color: '#F59E0B' },
-    { name: 'Concluído', value: 60, color: '#10B981' },
+    { name: 'Em progresso', value: 30, color: '#9CA3AF' },
+    { name: 'Em revisão', value: 15, color: '#6B7280' },
+    { name: 'Concluído', value: 60, color: '#4B5563' },
 ];
 
 const departmentData = departments.slice(0, 5).map(d => ({
@@ -36,10 +36,10 @@ export default function DashboardPage() {
                 {/* Top KPIs */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
                     {[
-                        { label: "Produtividade Geral", value: `${stats.avgProductivity}%`, trend: "+5.2%", color: "#10B981" },
-                        { label: "Projetos Ativos", value: stats.activeProjects, trend: "+2", color: "#3B82F6" },
+                        { label: "Produtividade Geral", value: `${stats.avgProductivity}%`, trend: "+5.2%", color: "#4B5563" },
+                        { label: "Projetos Ativos", value: stats.activeProjects, trend: "+2", color: "#9CA3AF" },
                         { label: "Tarefas Concluídas (Mês)", value: 489, trend: "+12.5%", color: "#8B5CF6" },
-                        { label: "Ideias Implementadas", value: 14, trend: "Estável", color: "#F59E0B" },
+                        { label: "Ideias Implementadas", value: 14, trend: "Estável", color: "#6B7280" },
                     ].map((kpi, i) => (
                         <div key={i} style={{
                             background: "white", padding: "20px", borderRadius: "16px",
@@ -64,8 +64,8 @@ export default function DashboardPage() {
                                 <AreaChart data={productivityData}>
                                     <defs>
                                         <linearGradient id="colorValor" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="#2563EB" stopOpacity={0.3} />
-                                            <stop offset="95%" stopColor="#2563EB" stopOpacity={0} />
+                                            <stop offset="5%" stopColor="#111827" stopOpacity={0.3} />
+                                            <stop offset="95%" stopColor="#111827" stopOpacity={0} />
                                         </linearGradient>
                                     </defs>
                                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
@@ -74,7 +74,7 @@ export default function DashboardPage() {
                                     <Tooltip
                                         contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
                                     />
-                                    <Area type="monotone" dataKey="valor" stroke="#2563EB" strokeWidth={3} fillOpacity={1} fill="url(#colorValor)" />
+                                    <Area type="monotone" dataKey="valor" stroke="#111827" strokeWidth={3} fillOpacity={1} fill="url(#colorValor)" />
                                 </AreaChart>
                             </ResponsiveContainer>
                         </div>
@@ -124,7 +124,7 @@ export default function DashboardPage() {
                                     <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} dy={10} />
                                     <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} />
                                     <Tooltip cursor={{ fill: '#F8FAFC' }} contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} />
-                                    <Bar dataKey="projetos" name="Projetos" fill="#7C3AED" radius={[4, 4, 0, 0]} barSize={32} />
+                                    <Bar dataKey="projetos" name="Projetos" fill="#4B5563" radius={[4, 4, 0, 0]} barSize={32} />
                                     <Bar dataKey="membros" name="Membros" fill="#93C5FD" radius={[4, 4, 0, 0]} barSize={32} />
                                 </BarChart>
                             </ResponsiveContainer>

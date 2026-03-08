@@ -3,17 +3,17 @@ import { Task } from "@/lib/data";
 import { Calendar, AlertCircle, Clock } from "lucide-react";
 
 const priorityConfig = {
-    low: { color: "#10B981", bg: "rgba(16,185,129,0.1)", label: "Baixa" },
-    medium: { color: "#F59E0B", bg: "rgba(245,158,11,0.1)", label: "Média" },
-    high: { color: "#EF4444", bg: "rgba(239,68,68,0.1)", label: "Alta" },
-    urgent: { color: "#7C3AED", bg: "rgba(124,58,237,0.1)", label: "Urgente" },
+    low: { color: "#4B5563", bg: "rgba(75,85,99,0.1)", label: "Baixa" },
+    medium: { color: "#6B7280", bg: "rgba(107,114,128,0.1)", label: "Média" },
+    high: { color: "#6B7280", bg: "rgba(107,114,128,0.1)", label: "Alta" },
+    urgent: { color: "#4B5563", bg: "rgba(75,85,99,0.1)", label: "Urgente" },
 };
 
 const statusConfig = {
     todo: { color: "#94A3B8", bg: "#F1F5F9", label: "A fazer" },
-    inprogress: { color: "#2563EB", bg: "rgba(37,99,235,0.1)", label: "Em progresso" },
-    review: { color: "#F59E0B", bg: "rgba(245,158,11,0.1)", label: "Em revisão" },
-    done: { color: "#10B981", bg: "rgba(16,185,129,0.1)", label: "Concluído" },
+    inprogress: { color: "#111827", bg: "rgba(17,24,39,0.1)", label: "Em progresso" },
+    review: { color: "#6B7280", bg: "rgba(107,114,128,0.1)", label: "Em revisão" },
+    done: { color: "#4B5563", bg: "rgba(75,85,99,0.1)", label: "Concluído" },
 };
 
 export default function TaskCard({ task }: { task: Task }) {
@@ -79,7 +79,7 @@ export default function TaskCard({ task }: { task: Task }) {
                             Progresso
                         </span>
                         <span
-                            style={{ fontSize: 11, color: "#2563EB", fontWeight: 700 }}
+                            style={{ fontSize: 11, color: "#111827", fontWeight: 700 }}
                         >
                             {task.progress}%
                         </span>
@@ -162,12 +162,12 @@ export default function TaskCard({ task }: { task: Task }) {
                             alignItems: "center",
                             gap: 4,
                             fontSize: 11,
-                            color: isOverdue ? "#EF4444" : "#94A3B8",
+                            color: isOverdue ? "#6B7280" : "#94A3B8",
                             fontWeight: 500,
                         }}
                     >
                         {isOverdue ? (
-                            <AlertCircle size={12} color="#EF4444" />
+                            <AlertCircle size={12} color="#6B7280" />
                         ) : (
                             <Calendar size={12} />
                         )}
